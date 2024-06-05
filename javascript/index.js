@@ -1,0 +1,41 @@
+function updateTime() {
+  let lisbonElement = document.querySelector('#lisbon');
+  let lisbonDateElement = document.querySelector('#lisbon-date');
+  let lisbonTimeElement = document.querySelector('#lisbon-time');
+  let lisbonMeridiemElement = document.querySelector('#lisbon-meridiem');
+
+  lisbonDateElement.innerHTML = moment()
+    .tz('Europe/Lisbon')
+    .format('dddd, DD MMMM');
+  lisbonTimeElement.innerHTML = moment().tz('Europe/Lisbon').format('hh:mm:ss');
+  lisbonMeridiemElement.innerHTML = moment().tz('Europe/Lisbon').format('A');
+
+  let sydneyElement = document.querySelector('#sydney');
+  let sydneyDateElement = document.querySelector('#sydney-date');
+  let sydneyTimeElement = document.querySelector('#sydney-time');
+  let sydneyMeridiemElement = document.querySelector('#sydney-meridiem');
+
+  sydneyDateElement.innerHTML = moment()
+    .tz('Australia/Sydney')
+    .format('dddd, DD MMMM');
+  sydneyTimeElement.innerHTML = moment()
+    .tz('Australia/Sydney')
+    .format('hh:mm:ss');
+  sydneyMeridiemElement.innerHTML = moment().tz('Australia/Sydney').format('A');
+
+  let torontoElement = document.querySelector('#toronto');
+  let torontoDateElement = document.querySelector('#toronto-date');
+  let torontoTimeElement = document.querySelector('#toronto-time');
+  let torontoMeridiemElement = document.querySelector('#toronto-meridiem');
+
+  torontoDateElement.innerHTML = moment()
+    .tz('America/Toronto')
+    .format('dddd, DD MMMM');
+  torontoTimeElement.innerHTML = moment()
+    .tz('America/Toronto')
+    .format('hh:mm:ss');
+  torontoMeridiemElement.innerHTML = moment().tz('America/Toronto').format('A');
+}
+
+updateTime();
+setInterval(updateTime, 1000);

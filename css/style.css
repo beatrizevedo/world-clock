@@ -6,9 +6,9 @@ h2 {
   font-size: 45px;
   font-weight: 200;
   margin-top: 30px;
-
   margin-bottom: 10px;
   text-align: left;
+  justify-content: space-between;
 }
 form {
   text-align: center;
@@ -39,7 +39,6 @@ select {
 }
 .city {
   display: flex;
-  justify-content: space-between;
 }
 footer {
   color: white;
@@ -63,12 +62,15 @@ footer {
 .time {
   font-size: 50px;
   font-weight: 300;
-  margin-top: 30px;
-  margin-right: 20px;
+  margin-top: 35px;
+  margin-left: 160px;
+  text-align: right;
 }
-.time small {
-  font-size: 20px;
-  vertical-align: middle;
+.meridiem {
+  font-size: 16px;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 0;
 }
 .date {
   font-weight: 200;
@@ -90,6 +92,6 @@ form label {
 }
 footer {
   margin-top: 50px;
-  font-size: 15px;
+  font-size: 13px;
   color: white;
 }
