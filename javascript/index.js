@@ -39,3 +39,24 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 1000);
+
+function updateCityTime(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.split('/')[1];
+  let cityDate = moment().tz(cityTimeZone).format('dddd, DD MMMM');
+  let cityHour = moment().tz(cityTimeZone).format('hh:mm:ss');
+  let cityMeridiem = moment().tz(cityTimeZone).format('A');
+
+  let citiesElement = document.querySelector('#cities');
+  citiesElement.innerHTML = `<div class="city">
+          <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityDate}</div>
+          </div>
+          <div class="time">${cityHour}</div>
+          <span class="meridiem">${cityMeridiem}</span>
+        </div>`;
+}
+
+let citySelectElement = document.querySelector('#city-select');
+citySelectElement.addEventListener('change', updateCityTime);
