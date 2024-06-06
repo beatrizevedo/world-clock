@@ -59,7 +59,8 @@ function updateCityTime(event) {
           </div>
           <div class="time">${cityHour}</div>
           <span class="meridiem">${cityMeridiem}</span>
-        </div>`;
+        </div>
+        <a class="back" href="/">All cities</a>`;
 }
 
 let citySelectElement = document.querySelector('#city-select');
